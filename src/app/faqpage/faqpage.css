@@ -1,0 +1,139 @@
+/* Body Styling */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #ffe6ff;
+}
+
+/* Sidebar Menu - fixed on the left */
+.menu {
+    width: 200px;
+    padding: 20px;
+    position: fixed;
+    top: 80px; 
+    left: 20px;
+    height: auto;
+}
+
+/* FAQ Page */
+.faq-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    margin-left: 0; /* Space for the sidebar */
+    padding-top: 100px; /* Ensuring the content starts below the navbar */
+    padding-bottom: 20px;
+}
+
+/* FAQ Title */
+.title {
+    text-align: left; /* Align title to the left */
+    font-weight: bold;
+    font-size: 40px;
+    color: #000000;
+    margin-left: 20px; /* Left margin for title */
+    margin-top: 200px; 
+    margin-bottom: 5px;/* Space between navbar and title */
+}
+
+/* Subtitle Styling */
+.subtitle {
+    font-style: italic; /* Make subtitle italic */
+    font-size: 16px; /* Adjust font size */
+    color: #000000; /* Subtitle color */
+    margin-left: 20px; /* Left margin for subtitle */
+    margin-top: 0px;
+    margin-bottom: 150px;
+}
+
+/* FAQ Container */
+.faq-container {
+    width: 1000px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5px; 
+    margin-left: 10px;
+}
+
+/* FAQ Item */
+.faq-item {
+    border-bottom: 1px solid #f0a1ff;
+    padding: 15px 0;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Question Styling */
+.faq-question {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: #ff66b2;
+}
+
+/* Answer Styling */
+.faq-answer {
+    font-size: 16px;
+    color: #333333;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* Nav Bar Styling */
+.topnav {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    background-color: #fff; 
+    position: fixed; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    max-width: 1000px; 
+    width: calc(100% - 40px); 
+    z-index: 1000; 
+    padding: 10px 0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+}
+
+.topnav a {
+    color: #000000; 
+    text-align: center; 
+    padding: 14px 16px; 
+    text-decoration: none; 
+    font-size: 20px; 
+}
+
+.topnav a:hover {
+    text-decoration: underline; 
+    text-decoration-color: #ff66b2; 
+}
+
+.topnav a.active {
+    color: rgb(0, 0, 0); 
+}
+
+/* Diagonal Background Triangle */
+.faq-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130%;
+    height: 70%;
+    background: white;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    z-index: -1; /* Send the triangle behind other content */
+}
